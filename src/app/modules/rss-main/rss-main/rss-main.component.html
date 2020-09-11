@@ -1,0 +1,38 @@
+<app-add-rss></app-add-rss>
+<!---->
+<div class="container">
+  <div class="collection-container">
+    <ul class="collection-list" *ngFor="let rssItem of rss| async; let i = index">
+      <li class="collection-item">{{rssItem.name}}
+        <span (click)="unFallowRss(i)"
+              class="btn-cancel">&times;</span>
+      </li>
+    </ul>
+  </div>
+
+<!--  -->
+
+  <!--  -->
+  <div class="feed-container" >
+    <div class="feed" *ngFor="let rssfeeds of RssDataList">
+      <span class="feed-header-title">{{rssfeeds?.rss.channel[0].title}}</span>
+      <!--      <p>Add containers inside the card to create different sections:</p>-->
+
+      <div class="feed-item" style="width:50%;" *ngFor="let item of rssfeeds?.rss.channel[0].item">
+        <header class="feed-item-title">
+          <h1>{{item.title[0]}}</h1>
+        </header>
+
+        <div class="feed-item-description">
+          <p> {{item.description[0]}}</p>
+        </div>
+
+        <footer class="feed-item-pub-date">
+          <h5>{{item.pubDate|date}}</h5>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+</div>
+

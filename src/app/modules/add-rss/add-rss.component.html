@@ -1,0 +1,15 @@
+<div class="form-container" >
+  <form [formGroup]="rssFeedData" (ngSubmit)="addNewRss(rssFeedData)" >
+    <input class="input-text" type="text" formControlName="feedTitle" placeholder="Rss Feed Name">
+    <input class="input-text" type="text" formControlName="feedUrl" value="Rss Feed Url" placeholder="Rss Feed Url">
+<!--    <span class="warning" *ngIf="rssFeedData.controls['feedUrl'].errors?.pattern">-->
+<!--    *Please insert a valid Url </span>-->
+    <span class="warning" *ngIf="rssFeedData.controls['feedUrl'].errors"
+         >*Please insert a valid Url </span>
+    <button class="btn-add" type="submit"> Add </button>
+
+  </form>
+</div>
+
+
+

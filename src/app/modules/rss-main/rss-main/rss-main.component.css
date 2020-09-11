@@ -1,0 +1,30 @@
+/*.w3-card-4{*/
+/*  margin-bottom: 5px;*/
+/*}*/
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.feed-header-title{
+  font-size: x-large;
+  font-family: auto;
+  background: firebrick;
+  color: antiquewhite;
+}
+.collection-container{
+  width: 30%;
+  justify-content: space-between;
+}
+.feed-container{
+  width: 70%;
+  align-self: flex-end;
+  height: 400px;
+  overflow: scroll;
+  float:left;
+}
+.btn-cancel{
+  border-radius: 50%;
+  border-color: black;
+
+}
